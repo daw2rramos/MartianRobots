@@ -79,7 +79,7 @@ foreach (var pair in instructionPairs)
     {
         var robotReport = tryGetRobotReport.Value;
 
-        Console.Write(">_ Mission results =>");
+        Console.Write(">_ Mission results => ");
         Console.Write($"{robotReport.XPos} ");
         Console.Write($"{robotReport.YPos} ");
         Console.Write($"{robotReport.Orientation}");

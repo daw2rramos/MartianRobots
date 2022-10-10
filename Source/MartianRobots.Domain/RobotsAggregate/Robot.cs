@@ -19,10 +19,8 @@ namespace MartianRobots.Domain.RobotsAggregate
 
         public Orientation Orientation { get; private set; }
 
-        public void PlaceOn(Map map, int xPos, int yPos, Orientation orientation)
-        {
-            Guards.ThrowIfNull(map);
-
+        public void PlaceOn(int xPos, int yPos, Orientation orientation)
+        {            
             this.Coordinates = Coordinates.Create(xPos, yPos);
             this.RobotMode = RobotMode.InOperation;
             this.Orientation = orientation;            

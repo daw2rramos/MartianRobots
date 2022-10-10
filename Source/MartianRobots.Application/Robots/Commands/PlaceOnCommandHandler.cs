@@ -40,7 +40,7 @@ namespace MartianRobots.Application.Robots.Commands
 
             var deployInstruction = StringToDeployInstruction.Convert(instruction.DeployInstruction);
 
-            robot.PlaceOn(map, deployInstruction.Coordinates.XPos, deployInstruction.Coordinates.YPos, deployInstruction.Orientation);
+            robot.PlaceOn(deployInstruction.Coordinates.XPos, deployInstruction.Coordinates.YPos, deployInstruction.Orientation);
 
             var isRobotDeployed = await this.robotRepository.UnitOfWork.SaveEntitiesAsync(cancellationToken).ConfigureAwait(false);
 
